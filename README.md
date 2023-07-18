@@ -11,6 +11,8 @@ tiny-badge provides three main screens. ID / Business Card. Bitcoin address. Pro
 
 The A, B, C buttons can be used to switch between screens. Later the UP / DOWN buttons may be used to update the screens.
 
+Text and Images come from files on the badger2040 filesystem. You could use the examples from the fs directory or replace with your own. These should be copied to the root of the badger2040 in bootloader mode.
+
 
 ## Setup
 
@@ -29,5 +31,6 @@ tinygo flash -target=badger2040 .
 
 # This will build a binary file. Copy it to the badger2040 in bootloader mode that appears as a USB flash drive.
 tinygo build -target=badger2040 -o badger2040_tinybadge.uf2 .
+cp -v ./badger2040_tinybadge.uf2 /media/user/RPI-RP2
 ```
 
